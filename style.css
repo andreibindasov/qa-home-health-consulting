@@ -168,6 +168,7 @@ section{
 .section-1-wrapper{
     background: linear-gradient(rgba(6,11,87,.5), rgba(6,11,87,.3)), url(images/landing.jpg) center no-repeat;
     background-size: cover;
+    visibility: hidden;
 }
 
 .section-1-heading-wrapper{

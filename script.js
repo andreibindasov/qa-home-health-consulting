@@ -17,6 +17,7 @@ section1Wrapper.style.transform = 'scale(1)'
 document.addEventListener('DOMContentLoaded', function() {
   
     setTimeout(function() {
+        section1Wrapper.style.visibility = 'visible'
         section4Wrapper.style.visibility = 'visible'
         section3Wrapper.style.visibility = 'visible'
         section2Wrapper.style.visibility = 'visible'
