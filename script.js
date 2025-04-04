@@ -13,13 +13,15 @@ const section4Wrapper = document.querySelector(".section-4-wrapper")
 
 section1Wrapper.style.transform = 'scale(1)'
 
-window.onload = () => {
 
-    section2Wrapper.style.visibility = 'visible'
-    section3Wrapper.style.visibility = 'visible'
-    section4Wrapper.style.visibility = 'visible'
-
-}
+document.addEventListener('DOMContentLoaded', function() {
+  
+    setTimeout(function() {
+        section4Wrapper.style.visibility = 'visible'
+        section3Wrapper.style.visibility = 'visible'
+        section2Wrapper.style.visibility = 'visible'
+    }, 1800)
+})
 
 const navList = document.querySelector('.nav-list');
 Array.from(navList.children).forEach((link, index) => {
