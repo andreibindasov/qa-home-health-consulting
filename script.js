@@ -7,10 +7,22 @@ const progress = document.querySelector(".progress h2")
 const circles = document.querySelectorAll(".circle")
 const menu = document.querySelector(".menu")
 const section1Wrapper = document.querySelector(".section-1-wrapper")
+const section2Wrapper = document.querySelector(".section-1-wrapper")
+const section3Wrapper = document.querySelector(".section-1-wrapper")
 const section4Wrapper = document.querySelector(".section-4-wrapper")
 
 section1Wrapper.style.transform = 'scale(1)'
+section2Wrapper.style.visibility = 'hidden'
+section3Wrapper.style.visibility = 'hidden'
+section4Wrapper.style.visibility = 'hidden'
 
+window.addEventListener('load', (event) => {
+    console.log('Page is fully loaded');
+    section2Wrapper.style.visibility = 'visible'
+    section3Wrapper.style.visibility = 'visible'
+    section4Wrapper.style.visibility = 'visible'
+    
+  })
 
 const navList = document.querySelector('.nav-list');
 Array.from(navList.children).forEach((link, index) => {
@@ -18,6 +30,7 @@ Array.from(navList.children).forEach((link, index) => {
 });
 
 navList.addEventListener('click', (event) => {
+    
     const selectedIndex = Number(event.target['dataset']['index']);
  
     if (isNaN(selectedIndex)) return;
@@ -91,6 +104,8 @@ const pageController = () => {
 }
 
 window.addEventListener('wheel', (e)=>{
+    
+    
     const deltaY = e.deltaY > 0
     
     if (deltaY){
@@ -114,6 +129,7 @@ window.addEventListener('wheel', (e)=>{
 })
 
 document.querySelector('.left-btn').addEventListener('click', ()=>{
+    
     counter1--;
     counter2--;
     pageController() &&
@@ -128,6 +144,7 @@ document.querySelector('.left-btn').addEventListener('click', ()=>{
 })
 
 document.querySelector('.right-btn').addEventListener('click', ()=>{
+    
     counter1++;
   counter2++;
   pageController() &&
@@ -149,5 +166,6 @@ document.querySelector('.footer-img').addEventListener('mouseout', () => {
 })
 
 menu.addEventListener('click', () => {
+    
     document.querySelector('.navbar').classList.toggle('change')
 })
