@@ -18,9 +18,12 @@ section4Wrapper.style.visibility = 'hidden'
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('Page is loaded');
-    section2Wrapper.style.visibility = 'visible'
-    section3Wrapper.style.visibility = 'visible'
-    section4Wrapper.style.visibility = 'visible'
+    setTimeout(()=>{
+        section2Wrapper.style.visibility = 'visible'
+        section3Wrapper.style.visibility = 'visible'
+        section4Wrapper.style.visibility = 'visible'
+    }, 1500)
+    
     
   })
 
