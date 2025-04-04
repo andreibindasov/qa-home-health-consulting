@@ -16,8 +16,8 @@ section2Wrapper.style.visibility = 'hidden'
 section3Wrapper.style.visibility = 'hidden'
 section4Wrapper.style.visibility = 'hidden'
 
-window.addEventListener('load', (event) => {
-    console.log('Page is fully loaded');
+window.addEventListener('DOMContentLoaded', () => {
+    console.log('Page is loaded');
     section2Wrapper.style.visibility = 'visible'
     section3Wrapper.style.visibility = 'visible'
     section4Wrapper.style.visibility = 'visible'
