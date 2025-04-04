@@ -7,8 +7,8 @@ const progress = document.querySelector(".progress h2")
 const circles = document.querySelectorAll(".circle")
 const menu = document.querySelector(".menu")
 const section1Wrapper = document.querySelector(".section-1-wrapper")
-const section2Wrapper = document.querySelector(".section-1-wrapper")
-const section3Wrapper = document.querySelector(".section-1-wrapper")
+const section2Wrapper = document.querySelector(".section-2-wrapper")
+const section3Wrapper = document.querySelector(".section-3-wrapper")
 const section4Wrapper = document.querySelector(".section-4-wrapper")
 
 section1Wrapper.style.transform = 'scale(1)'
