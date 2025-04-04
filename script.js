@@ -12,19 +12,13 @@ const section3Wrapper = document.querySelector(".section-3-wrapper")
 const section4Wrapper = document.querySelector(".section-4-wrapper")
 
 section1Wrapper.style.transform = 'scale(1)'
-section2Wrapper.style.visibility = 'hidden'
-section3Wrapper.style.visibility = 'hidden'
-section4Wrapper.style.visibility = 'hidden'
 
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('Page is loaded');
-    setTimeout(()=>{
-        section2Wrapper.style.visibility = 'visible'
-        section3Wrapper.style.visibility = 'visible'
-        section4Wrapper.style.visibility = 'visible'
-    }, 1500)
-    
-    
+
+    section2Wrapper.style.visibility = 'visible'
+    section3Wrapper.style.visibility = 'visible'
+    section4Wrapper.style.visibility = 'visible'
+
   })
 
 const navList = document.querySelector('.nav-list');
