@@ -1,0 +1,789 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Gidole', Helvetica, serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.menu{
+    display: none;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    height: 15rem;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link{
+    font-size: 1.8rem;
+    color: whitesmoke;
+    width: 21rem;
+    margin: 0 3rem;
+    text-transform: uppercase;
+    border: .3rem solid #ddd;
+    text-align: center;
+    padding: .3rem;
+    letter-spacing: .3rem;
+    position: relative;
+    overflow: hidden;
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 6rem;
+    background-color: #72a4e6;
+    left: -20%;
+    transform: rotate(-40deg) translateX(-4rem);
+    transform-origin: left bottom;
+    opacity: .8;
+    transition: left .3s;
+}
+.nav-link:hover::before{
+    left: 110%;
+    
+}
+
+
+.page-btn{
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+.page-btn img{
+    width: 4.5rem;
+    opacity: .9;
+    cursor: pointer;
+
+    filter: opacity(.3) drop-shadow(0 0 0 #fff);
+    transition: all .3s;
+}
+.left-btn{
+    left: 4rem;
+}
+
+.right-btn{
+    right: 4rem;
+}
+.right-btn img{
+    transform: rotate(180deg);
+}
+
+.left-btn img:hover{
+    opacity: 1;
+    transform: rotate(15deg);
+}
+.right-btn img:hover{
+    opacity: 1;
+    transform: rotate(195deg);
+}
+
+
+.progress-wrapper{
+    position: fixed;
+    z-index: 99;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.progress{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.progress h2{
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: whitesmoke;
+}
+
+.circle-wrapper{
+    display: flex;
+}
+.circle{
+    width: 1rem;
+    height: 1rem;
+    border: .1rem solid whitesmoke;
+    border-radius: 50%;
+    margin: 0 .3rem;
+    transition: background-color .3s;
+}
+
+.circle-1{
+    background-color: #ddd;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    overflow: hidden;
+    transition: left 1.5s;
+}
+
+.section-1{
+    z-index: 50;
+}
+
+.section-wrapper{
+    width: inherit;
+    height: inherit;
+    transform: scale(1.5);
+    transition: all 2s;
+}
+
+.section-1-wrapper{
+    background: linear-gradient(rgba(6,11,87,.5), rgba(6,11,87,.3)), url(images/landing.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.section-1-heading-wrapper{
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+
+
+.section-1-heading-h1{
+    font-size: 6rem;
+    font-weight: 600;
+    color: whitesmoke;
+    text-transform: capitalize;
+    letter-spacing: .18rem;
+    /* border-bottom: .3rem solid #72a4e6; */
+    text-align: center;
+    user-select: none;
+    text-shadow: 3px 3px 1px #0a0a0a;   
+}
+
+
+.section-1-heading-h2{
+    font-size: 3rem;
+    font-weight: 300;
+    color: #ddd;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    border-bottom: .3rem solid #72a4e6;
+    text-align: center;
+    user-select: none;
+    text-shadow: 3px 3px 1px #0a0a0a;   
+    padding: 3rem 0;
+}
+
+
+.section-2{
+    z-index: 40;
+}
+
+
+.section-2-wrapper{
+    background: linear-gradient(rgba(6,11,87,.8), rgba(6,11,87,.9)), url(images/dna.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.section-2-heading{
+    font-size: 9rem;
+    color: whitesmoke;
+    font-weight: 300;
+    text-align: center;
+    /* margin-bottom: 6rem; */
+    user-select: none;
+    /* top: 23%;
+    left: 30%;
+    transform: translateX(-70%);
+    position: absolute; */
+}
+
+.section-2-about{
+    color: whitesmoke;
+    font-size: 1.8rem;
+    max-width: 45rem;
+}
+
+.call-now{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-us{
+    opacity: .9;
+    width: 33rem;
+}
+
+.call-now-btn{
+    width: 18rem;
+    height: 6rem;
+    font-size: 2.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: whitesmoke;
+    border: .3rem solid whitesmoke;
+    transition: all .3s;
+}
+
+.call-now-btn:hover{
+    background-color: #72a4e6;
+    color: rgb(6, 11, 87);
+}
+
+.medical-consulting{
+    opacity: .9;
+    width: 80rem;
+    border: .3rem solid whitesmoke;
+    padding: 3rem;
+}
+
+.section-3{
+    z-index: 30;
+}
+
+
+.section-3-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.section-3-bg{
+    width: 109%;
+    height: 109%;
+    position: absolute;
+    background: linear-gradient(rgba(6,11,87,.8), rgba(6,11,87,.7)), url(images/heartrate.jpg) center no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(0.6rem);
+}
+
+.section-3-heading{
+    font-size: 9rem;
+    color: whitesmoke;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 6rem;
+    user-select: none;
+    
+    transform: translateY(150%);
+}
+
+.section-3-div{
+    width: 48rem;
+    height: 32rem;
+    /* position: absolute; */
+    /* background: linear-gradient(rgba(6,11,87,1), rgba(6,11,87,1)), url(images/heartrate.jpg) center no-repeat;
+    background-size: cover; */
+    z-index: 45;
+    /* filter: blur(0.9rem); */
+    color: whitesmoke;
+    font-size: 1.8rem;
+    font-weight: 300;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.section-3-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: .3rem solid whitesmoke;
+    padding: 1.8rem;
+    opacity: .6;
+    z-index: -1;
+
+}
+
+p{
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    text-align: justify;
+    text-indent: 3rem;
+    line-height: 3.3rem;
+    letter-spacing: .15rem;
+}
+
+p strong{
+    
+    color: #72a4e6;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.section-3-div-1{
+    transform: translate(-110%, 30%);
+}
+.section-3-div-2{
+    transform: translate(0, 0%);
+}
+.section-3-div-3{
+    transform: translate(110%, -30%);
+}
+
+.section-4{
+    z-index: 20;
+    background-color: black;
+}
+
+
+.section-4-wrapper{
+    background: linear-gradient(rgba(6,11,87,.7), rgba(6,11,87,.5)), url(images/calendar.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    /* transition: opacity 1.5s; */
+}
+
+.footer-list{
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: .15rem;
+    color: #ddd;
+    margin: 1rem 0;
+    line-height: 3.9rem;
+    min-width: 33rem;
+    margin: 6rem;
+}
+.footer-list li:first-child{
+    text-transform: uppercase;
+    color: whitesmoke;
+    margin-bottom: 3rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+hr{
+    margin: 3rem 0;
+}
+
+.footer-img{
+    width: 51rem;
+    margin: 0 18rem;
+    opacity: .9;
+    /* filter: blur(.23rem); */
+    border: .3rem solid whitesmoke;
+    padding: 1.8rem;
+    transition: all 1.5s;
+}
+.footer-img:hover{
+    opacity: 1;
+    transform: scale(2);
+}
+
+.copyright{
+    position: absolute;
+    bottom: 2.1rem;
+    font-size: 2.1rem;
+    font-weight: 300;
+    letter-spacing: .3rem;
+    color: #ddd;
+    text-align: center;
+}
+.monad{
+    /* margin-top: 1rem; */
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+
+@media(max-width:1600px){
+    .medical-consulting{
+        width:51rem;
+        margin: 0 3rem;
+    }
+    .section-4-wrapper{
+        padding: 0 9rem;
+    }
+    .footer-img{
+        width:42rem;
+        margin: 0 6rem;
+    }
+    .footer-list{
+        min-width: 27rem;
+        margin: 0;
+    }
+    .footer-list:first-of-type{
+        margin-left: 6rem;
+        transform: translateY(-15rem);
+    }
+    .footer-list:last-of-type{
+        margin-right: 6rem;
+        transform: translateY(15rem);
+    }
+
+    .section-3-div{
+        width: 33rem;
+        height: 33rem;
+    }
+    .section-3-div-1{
+        transform: translate(-110%, 50%);
+    }
+    .section-3-div-2{
+        transform: translate(0, 0%);
+    }
+    .section-3-div-3{
+        transform: translate(110%, -50%);
+    }
+}
+
+@media(max-width:1300px){
+    /* .medical-consulting{
+        width:51rem;
+        margin: 0 3rem;
+    } */
+    .section-4-wrapper{
+        padding: 0 9rem;
+    }
+    .footer-img{
+        width:42rem;
+        margin: 0 3rem;
+    }
+    .footer-list{
+        min-width: 27rem;
+        margin: 0;
+        line-height: 2.1rem;
+    }
+    .footer-list:first-of-type{
+        margin-left: 6rem;
+        transform: translateY(-25rem);
+    }
+    .footer-list:last-of-type{
+        margin-right: 6rem;
+        transform: translateY(25rem);
+    }
+
+    .section-3-wrapper{
+        width: 100%;
+    }
+    
+    .section-3-div{
+        width: 60rem;
+        height: 21rem;
+        /* text-align: center; */
+        margin: 1rem 0;
+    }
+    .section-3-div-1{
+        transform: translate(0%, 45%);
+    }
+    .section-3-div-2{
+        transform: translate(0%, 45%);
+    }
+    .section-3-div-3{
+        transform: translate(0%, 45%);
+    }
+
+    .medical-consulting{
+        width:42rem;
+        margin-top: 3rem;
+        margin-right: 9rem;
+    }
+    .call-now{
+        margin-left: 9rem;
+    }
+}
+
+@media(max-width:1200px){
+    .nav-link{
+        margin: 0 1.5rem;
+        width: 18rem;
+        letter-spacing: .15rem;
+    }
+
+    .section-4-wrapper{
+        flex-direction: column;
+    }
+
+    /* .footer-img{
+        width:42rem;
+        margin: 0 3rem;
+    } */
+    .footer-list{
+        min-width: 75%;
+        margin: 0;
+        line-height: 2.1rem;
+    }
+    .footer-list:first-of-type{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        transform: translate(0);
+    }
+    .footer-list:last-of-type{
+        margin-top: 3rem;
+        transform: translate(0);
+        text-align: right;
+    }
+}
+
+@media(max-width:1000px){
+    
+    .navbar{
+        justify-content: start;
+        padding-left: 1.8rem;
+    }
+
+    .menu{
+        display: block;
+        width: 4.5rem;
+        height: 3.3rem;
+        /* background-color: whitesmoke; */
+        position: absolute;
+        top: 1.5rem;
+        right: 3.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu-line {
+        width: 100%;
+        height: .3rem;
+        background-color: #72a4e6;
+        transition: transform .6s;
+    }
+
+    .change .menu-line-1{
+        transform: rotate(40deg) translate(0, 1.8rem);
+    }
+    .change .menu-line-2{
+        transform: translate(-1rem, 2.1rem);
+    }
+    .change .menu-line-3{
+        transform: rotate(-40deg) translate(0, -1.8rem);
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 9rem;
+        right: -33rem;
+        flex-direction: column;
+        height: calc(100vh - 9rem);
+        background-color: #0a0a0a;
+        justify-content: start;
+        padding: 3rem;
+        border-radius: .6rem 0 0 0;
+        transition: right .6s;
+        z-index: 99;
+    }
+    .change .nav-list{
+        right: 0;
+    }
+    .nav-link{
+        margin: 1rem;
+    }
+    
+    .logo{
+        margin-top: -3rem !important;
+    }
+    
+    .section-2-wrapper{
+        flex-direction: column;
+    }
+    
+    .section-2-heading{
+        transform: translate(0);
+    }
+    .medical-consulting{
+        width:42rem;
+        margin-top: 3rem;
+        margin-right: 0;
+    }
+    .call-us{
+        opacity: .9;
+        width: 24rem;
+    }
+    
+    .copyright{
+        /* position: absolute; */
+        bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        letter-spacing: .21rem;
+        color: #ddd;
+        text-align: center;
+    }
+
+
+}
+
+@media(max-width: 800px){
+   
+    .section-3-wrapper{
+        width: 100%;
+        /* height: calc(100vh - 9rem); */
+    }
+    .section-3-heading{
+        margin-bottom: 0;
+        user-select: none;
+        
+        transform: translateY(12rem);
+    }
+    
+    .section-3-div{
+        width: 45rem;
+        height: 21rem;
+        text-align: center;
+        margin: 1rem 0;
+        line-height: normal;
+        
+    }
+    .section-3-div-1{
+        transform: translate(0%, 12rem);
+    }
+    .section-3-div-2{
+        transform: translate(0%, 12rem);
+    }
+    .section-3-div-3{
+        transform: translate(0%, 12rem);
+    }
+    p{
+        padding: 3rem;
+        text-align: justify;
+        text-indent: 3rem;
+        line-height: 2.4rem;
+        letter-spacing: .1rem;
+    }
+
+    .left-btn{
+        left: 1rem;
+    }
+    .right-btn{
+        right: 1rem;
+    }
+    .progress-wrapper{
+        position: fixed;
+        z-index: 99;
+        bottom: 1rem;
+        left: 1.5rem;
+    }
+
+    .copyright{
+        /* position: absolute; */
+        bottom: 0;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: .1rem;
+        color: #ddd;
+        text-align: center;
+    }
+
+}
+
+@media(max-width:600px){
+    html{
+       font-size: 45%; 
+    }
+
+    .page-btn{
+        bottom: 1rem;
+        top: 50%;
+        transform: translateY(45%);
+        z-index: 90;
+    }
+    .page-btn img{
+        width: 2.4rem;
+        
+    }
+    .left-btn{
+        left: 42%;
+    }
+    .right-btn{
+        right: 42%;
+    }
+    .progress-wrapper{
+        top: 1.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-list{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        right: -100%;
+        
+    }
+   
+    .section-1-heading-h1{
+        font-size: 4.5rem;
+    }
+    .section-1-heading-h2{
+        font-size: 2.1rem;
+    }
+    .section-2-heading{
+        font-size: 6rem;
+    }
+    .medical-consulting{
+        margin: 0;
+        width: 36rem;
+    }
+
+    .section-3-heading{
+        font-size: 6rem;
+    }
+
+    .section-3-div{
+        margin: 1.2rem;
+        width: 39rem;
+    }
+
+    .footer-list{
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .copyright{
+        width: 100%;
+        text-align: right;
+        bottom: 6rem;
+        padding: 0 1rem;
+    }
+    .monad{
+        font-size: .6rem;
+    }
+}
