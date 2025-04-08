@@ -1,3 +1,9 @@
+window.onload = () => {
+    setTimeout(() => {
+        document.querySelector('body').classList.add("display")
+    }, 2100)
+}
+
 let counter1=0
 let counter2=1
 let bool = true
