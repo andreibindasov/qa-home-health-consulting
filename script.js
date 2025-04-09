@@ -1,9 +1,3 @@
-window.onload = () => {
-    setTimeout(() => {
-        document.querySelector('body').classList.add("display")
-    }, 2100)
-}
-
 let counter1=0
 let counter2=1
 let bool = true
@@ -19,16 +13,25 @@ const section4Wrapper = document.querySelector(".section-4-wrapper")
 
 section1Wrapper.style.transform = 'scale(1)'
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  
-    setTimeout(function() {
+window.onload = () => {
+    setTimeout(() => {
+        document.querySelector('body').classList.add("display")
         section1Wrapper.style.visibility = 'visible'
         section4Wrapper.style.visibility = 'visible'
         section3Wrapper.style.visibility = 'visible'
         section2Wrapper.style.visibility = 'visible'
-    }, 1800)
-})
+    }, 3300)
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+  
+//     setTimeout(function() {
+//         section1Wrapper.style.visibility = 'visible'
+//         section4Wrapper.style.visibility = 'visible'
+//         section3Wrapper.style.visibility = 'visible'
+//         section2Wrapper.style.visibility = 'visible'
+//     }, 1800)
+// })
 
 const navList = document.querySelector('.nav-list');
 Array.from(navList.children).forEach((link, index) => {
