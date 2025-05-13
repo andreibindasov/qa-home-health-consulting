@@ -550,6 +550,7 @@ hr{
 }
 
 .copyright{
+    display: none;
     position: absolute;
     bottom: 2.1rem;
     font-size: 2.1rem;
